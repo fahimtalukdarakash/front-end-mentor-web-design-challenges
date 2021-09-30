@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 13% 10%;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+}
+.main-section{
+    width: 70%;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+}
+.image-drawer{
+    width: 40%;
+    height: 300px;
+    float: left;
+    margin-right: 40px;
+}
+.paragraph-part{
+    padding: 30px;
+}
+.card-profile-container{
+    display: flex;
+    margin: 2em 3.8em 0em;
+}
+.avatar-image{
+    width: 7%;
+    border-radius: 100%;
+    float: left;
+    margin-right: 20px;
+}
+.pop-up{
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3em;
+    height: 3em;
+    margin: 1.4em 1em 1em auto;
+    top: -65px;
+    right: 20px;
+    position: relative;
+}
+.pop-up--active{
+    display: flex;
+}
+.card-share-pop{
+    display: flex;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    width: 20em;
+    height: 4.8em;
+    border-radius: 1em;
+    position: absolute;
+    bottom: 5rem;
+    right: -7.6rem;
+    display: none;
+}
+.card-share-pop--active{
+    display: flex;
+}
+.card-share-pop::after{
+    position: absolute;
+    content: "";
+    bottom: -3.5rem;
+    left: 50%;
+    border: 20px solid transparent;
+    border-top-color: hsl(217, 19%, 35%);
+    border-bottom: 0;
+    margin: 0 0 2rem -2rem;
+}
+.pop-up-title{
+    margin-bottom: 0;
+    padding-left: 20px;
+    margin-right: 40px;
+    text-transform: uppercase;
+    color: white;
+}
+.card-share-pop a{
+    margin-right: 2.6em;
+}
+.pop-button-wrapper{
+    background-color: hsl(212, 23%, 69%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    width: 3em;
+    margin: 1.4em 1em 1em auto;
+    display: none;
+}
+.pop-button-wrapper--active{
+    display: flex;
+}
+@media(max-width:768px){
+    body{
+        padding: 15% 3%;
+    }
+    .main-section{
+        width: 90%;
+        height: 80%;
+    }
+    .image-drawer{
+        width: 100%;
+        height: 200px;
+        float: none;
+        margin: 0;
+    }
+    .avatar-image{
+    width: 15%;
+    border-radius: 100%;
+    margin-left: 30px;
+    float: left;
+    margin-right: 15px;
+}
+    .main-section .card-share-pop{
+        width:31.2em;
+        height: 8.8em;
+        border-radius: 0 0 1em 1em;
+        bottom: -4rem;
+        right: -2.5em;
+        justify-content: space-between
+    }
+    .card-share-pop::after{
+        display: none;
+    }
+    .pop-button-wrapper{
+        display: flex;
+        margin: 0;
+    }
+}

@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 7% 15%;
+    background: linear-gradient(to bottom, #af67e9 22%, #6565e7 100%); 
+    font-family: 'Kumbh Sans', sans-serif;
+}
+section{
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+}
+.bg-desktop{
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    right: 350px;
+    top: -90px;
+}
+.bg-mobile{
+    display: none;
+}
+.women-desktop{
+    position: absolute;
+    display: block;
+    top: 130px;
+    left: 130px;
+}
+.women-mobile{
+    position: absolute;
+    display: none;
+}
+.illustration-box{
+    position: absolute;
+    top: 275px;
+    left: 75px;
+}
+.faq-section{
+    padding: 50px 30px 0 0;
+}
+.title{
+    font-size: 3rem;
+    padding-bottom: 20px;
+    font-weight: 700
+}
+.faq{
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+    text-align: center;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question p{
+    margin: auto 0;
+}
+.question p:hover{
+    color: hsl(14, 88%, 65%);
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+.answer p{
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+}
+.faq.active .question p{
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+.faq.active .answer{
+    max-height: 100px;
+    animation: fade 1s ease-in-out;
+}
+.faq.active .arrow{
+    transform: rotate(180deg);
+}
+.arrow{
+    transition: transform 0.5s ease-in;
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@media(max-width:375px){
+    body{
+        margin: 0;
+        padding: 45% 7%;
+    }
+    section{
+        height: 700px;
+    }
+    .women-desktop{
+        display: none;
+    }
+    .women-mobile{
+        display: block;
+        top: 50px;
+        left: 40px;
+    }
+    .illustration-box{
+        display: none;
+    }
+    .bg-desktop{
+        display: none;
+    }
+    .bg-mobile{
+        display: block;
+        position: relative;
+        margin: auto;
+    }
+    .faq-section{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        padding: 30px 25px 0 30px;
+    }
+    .faq{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+}
